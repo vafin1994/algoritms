@@ -1,0 +1,22 @@
+<h3>
+    Algorithm of Binary search in sorted array
+</h3>
+For example we have such array [<span *ngFor="let num of listOfNumbers">{{num}} </span>]; <br>
+And we need to find a position of number {{numToFind}}, or return None, if there is no such number in this array;
+<pre>
+binarySearch()
+    let low = 0;
+    let high = this.listOfNumbers.length - 1;
+    while (low <= high)
+    const mid = Math.floor((low + high) / 2);
+    const guess = this.listOfNumbers[mid];
+    if (guess === this.numToFind) return mid;
+    else if (guess < this.numToFind) low = mid + 1;
+    else if (guess > this.numToFind) high = mid - 1;
+    return 'None';
+</pre>
+<div *ngFor="let record of log">
+    {{record}}
+</div>
+Result: {{result}};
+
