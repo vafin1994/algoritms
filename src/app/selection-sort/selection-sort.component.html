@@ -1,0 +1,23 @@
+<h3>
+    Algorithm of Selection sort
+</h3>
+We have an array
+[<span *ngFor="let num of listOfNumbers">{{num}} </span>] and we want to sort it from smallest to highest
+<h4>First step, we will write function which find the smallest number in the array</h4>
+<pre>
+  findSmallest(arr)
+  let smallest = arr[0];
+    for (let i = 1; i < this.arr.length; i++)
+      if (this.listOfNumbers[i] < this.smallest)
+        smallest = arr[i];
+</pre>
+<h4>Now we will write Selection sorting algorithm</h4>
+  <pre>
+    selectionSort(arr)
+    const sortedArr = [];
+    for (let i = 0; i < arr.length; i++)
+      const smallestIndex = this.findSmallest(arr);
+      sortedArr.push(arr.pop(smallestIndex));
+    return sortedArr;
+  </pre>
+Sorted array = <span *ngFor="let num of sortedArr">{{num}} </span>

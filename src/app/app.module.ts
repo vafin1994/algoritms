@@ -6,11 +6,15 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import { BinarySearchInArrComponent } from './binary-search-in-arr/binary-search-in-arr.component';
 import {MatButtonModule, MatToolbarModule} from '@angular/material';
+import { SelectionSortComponent } from './selection-sort/selection-sort.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        BinarySearchInArrComponent
+        BinarySearchInArrComponent,
+        SelectionSortComponent,
+        TestComponent
     ],
     imports: [
         BrowserModule,
